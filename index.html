@@ -6,37 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Asif Shahzad</title>
     <style>
-        @font-face {
-  font-family: 'Satoshi-Regular';
-  src: url('fonts/Satoshi-Regular.woff2') format('woff2'),
-       url('fonts/Satoshi-Regular.woff') format('woff'),
-       url('fonts/Satoshi-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
+      /* Font Face Definitions */
+      @font-face {
+        font-family: "Satoshi-Regular";
+        src: url("fonts/Satoshi-Regular.woff2") format("woff2"),
+          url("fonts/Satoshi-Regular.woff") format("woff"),
+          url("fonts/Satoshi-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+      }
 
-@font-face {
-  font-family: 'Satoshi-Medium';
-  src: url('fonts/Satoshi-Medium.woff2') format('woff2'),
-       url('fonts/Satoshi-Medium.woff') format('woff'),
-       url('fonts/Satoshi-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
+      @font-face {
+        font-family: "Satoshi-Medium";
+        src: url("fonts/Satoshi-Medium.woff2") format("woff2"),
+          url("fonts/Satoshi-Medium.woff") format("woff"),
+          url("fonts/Satoshi-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-display: swap;
+        font-style: normal;
+      }
 
-@font-face {
-  font-family: 'Satoshi-Bold';
-  src: url('fonts/Satoshi-Bold.woff2') format('woff2'),
-       url('fonts/Satoshi-Bold.woff') format('woff'),
-       url('fonts/Satoshi-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
+      @font-face {
+        font-family: "Satoshi-Bold";
+        src: url("fonts/Satoshi-Bold.woff2") format("woff2"),
+          url("fonts/Satoshi-Bold.woff") format("woff"),
+          url("fonts/Satoshi-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-display: swap;
+        font-style: normal;
+      }
 
-
+      /* General Styles */
       body {
         margin: 0;
         padding: 0;
@@ -44,33 +45,42 @@
         background-color: #ffffff;
         transition: background-color 0.3s, color 0.3s;
       }
+
       body.dark-mode {
         background-color: #121212;
         color: #e0e0e0;
       }
+
       .content-container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
       }
+
+      /* Profile Image and Meta Styles */
       #profile-image {
         width: 80px;
         height: 80px;
         object-fit: cover;
         border-radius: 50%;
       }
+
       #profile-meta > #title {
         font-size: 23px;
         line-height: 1.6;
         margin-bottom: 5px;
       }
+
       #profile-meta > #subtitle {
         margin-top: 0;
         color: #666;
       }
+
       body.dark-mode #profile-meta > #subtitle {
         color: #bbb;
       }
+
+      /* Container and Section Styles */
       #container {
         width: 100%;
         margin-top: 30px;
@@ -81,18 +91,23 @@
         padding-bottom: 25px;
         flex-wrap: wrap;
       }
+
       body.dark-mode #container {
         border-bottom: none;
       }
+
       #section1 {
         display: flex;
         align-items: center;
         gap: 25px;
       }
+
       #section2 {
         display: flex;
         align-items: center;
       }
+
+      /* Contact Button Styles */
       #section2 > #contact {
         background-color: rgb(240, 239, 239);
         padding: 13px 20px;
@@ -102,24 +117,31 @@
         font-weight: bold;
         transition: 0.4s;
       }
+
       body.dark-mode #section2 > #contact {
         background-color: #333;
         color: #e0e0e0;
       }
+
       #section2 > #contact:hover {
         background-color: black;
         color: white;
       }
+
+      /* Section 3 Styles */
       #section3 {
         width: 100%;
         margin-top: 20px;
       }
+
+      /* Dropdown Styles */
       .custom-dropdown {
         z-index: 1;
         position: relative;
         width: 100%;
         max-width: 300px;
       }
+
       .dropdown-header {
         color: gray;
         padding: 10px 15px;
@@ -131,15 +153,18 @@
         justify-content: space-between;
         align-items: center;
       }
+
       body.dark-mode .dropdown-header {
         background-color: #333;
         color: #e0e0e0;
         border-color: #444;
       }
+
       .dropdown-header::after {
         content: "▼";
         font-size: 12px;
       }
+
       .dropdown-options {
         display: none;
         position: absolute;
@@ -154,27 +179,35 @@
         overflow-y: auto;
         z-index: 2;
       }
+
       body.dark-mode .dropdown-options {
         background-color: #333;
         border-color: #444;
       }
+
       .option {
         padding: 10px 15px;
         cursor: pointer;
       }
+
       .option:hover {
         background-color: #f0f0f0;
       }
+
       body.dark-mode .option:hover {
         background-color: #444;
       }
+
+      /* Projects Section Styles */
       #projects-count {
         margin-top: 20px;
         color: #666;
       }
+
       body.dark-mode #projects-count {
         color: #bbb;
       }
+
       .projects-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -182,6 +215,7 @@
         margin-top: 20px;
         margin-bottom: 10vh;
       }
+
       .project-card {
         border: 1px solid #e0e0e0;
         border-radius: 16px;
@@ -192,10 +226,12 @@
         flex-direction: column;
         background-color: white;
       }
+
       body.dark-mode .project-card {
         background-color: #0c0b0b;
         border-color: #444;
       }
+
       .project-image {
         filter: brightness(90%);
         width: 100%;
@@ -205,245 +241,288 @@
         object-fit: cover;
         border-radius: 7px;
       }
+
       .project-info {
         padding-top: 18px;
         padding-left: 3px;
         flex-grow: 1;
       }
+
       .project-title {
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 10px;
       }
+
       .project-description {
         font-size: 14px;
         color: #666;
       }
+
       body.dark-mode .project-description {
         color: #bbb;
       }
+
+      /* Responsive Styles */
       @media (max-width: 768px) {
         #container {
           flex-direction: column;
           align-items: flex-start;
         }
+
         #section1 {
           margin-bottom: 20px;
         }
+
         .projects-grid {
           grid-template-columns: 1fr;
         }
+
         .project-image {
           width: 100%;
           height: auto;
         }
       }
+
+      /* Tags Styles */
       #tags {
         font-weight: bold;
         display: flex;
         justify-content: space-between;
       }
-#portfolio-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-/* The switch - the box around the slider */
-.switch {
-  display: block;
-  --width-of-switch: 3.5em;
-  --height-of-switch: 2em;
-  /* size of sliding icon -- sun and moon */
-  --size-of-icon: 1.4em;
-  /* it is like a inline-padding of switch */
-  --slider-offset: 0.3em;
-  position: relative;
-  width: var(--width-of-switch);
-  height: var(--height-of-switch);
-}
+      /* Portfolio Header Styles */
+      #portfolio-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+      /* The switch - the box around the slider */
+      .switch {
+        display: block;
+        --width-of-switch: 3.5em;
+        --height-of-switch: 2em;
+        /* size of sliding icon -- sun and moon */
+        --size-of-icon: 1.4em;
+        /* it is like a inline-padding of switch */
+        --slider-offset: 0.3em;
+        position: relative;
+        width: var(--width-of-switch);
+        height: var(--height-of-switch);
+      }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #f4f4f5;
-  transition: .4s;
-  border-radius: 30px;
-}
+      /* Hide default HTML checkbox */
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: var(--size-of-icon,1.4em);
-  width: var(--size-of-icon,1.4em);
-  border-radius: 20px;
-  left: var(--slider-offset,0.3em);
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-  ;
- transition: .4s;
-}
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f4f4f5;
+        transition: 0.4s;
+        border-radius: 30px;
+        border: 1px solid #c5c6c9;
+      }
 
-input:checked + .slider {
-  background-color: #303136;
-}
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: var(--size-of-icon, 1.4em);
+        width: var(--size-of-icon, 1.4em);
+        border-radius: 20px;
+        left: var(--slider-offset, 0.3em);
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+        transition: 0.4s;
+      }
 
-input:checked + .slider:before {
-  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
-  background: #303136;
-  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
-  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-}
+      input:checked + .slider {
+        background-color: #303136;
+        border: 1px solid #c5c6c9;
+      }
+
+      input:checked + .slider:before {
+        left: calc(
+          100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em))
+        );
+        background: #303136;
+        /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+        box-shadow: inset -3px -2px 5px -2px #8983f7,
+          inset -10px -4px 0 0 #a3dafb;
+      }
     </style>
   </head>
   <body>
     <div class="content-container">
       <div id="container">
-     
+        <!-- Section 2 - Contact Information -->
         <div id="section2">
+          <!-- Placeholder for contact button -->
+        </div>
+
+        <!-- Section 3 - Portfolio and Filters -->
+        <section id="section3">
+          <div id="portfolio-header">
+            <h2 id="portfolio">Portfolio</h2>
+            <!-- Dark Mode Toggle Switch -->
+            <label class="switch">
+              <input type="checkbox" id="dark-mode-toggle" />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <!-- Filters Dropdown -->
+          <div id="filters">
+            <div class="custom-dropdown">
+              <div class="dropdown-header">Search areas of expertise</div>
+              <div class="dropdown-options">
+                <div class="option" data-category="all">All Projects</div>
+                <div class="option" data-category="branding">Branding</div>
+                <div class="option" data-category="ecommerce">E-Commerce</div>
+                <div class="option" data-category="transportation">
+                  Transportation
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects Count Display -->
+          <div id="projects-count">Showing 3 projects</div>
+
+          <!-- Projects Grid -->
+          <div class="projects-grid">
+            <!-- Project Card Example -->
+            <div class="project-card" data-category="branding">
+              <img
+                src="designe.png"
+                alt="Designe Solutions and Co"
+                class="project-image"
+              />
+              <div class="project-info">
+                <div class="project-title">Designe Solutions and Co</div>
+                <div class="project-description">
+                  It is a branding services agency providing their services all
+                  over the world on Fiverr. But now...
+                </div>
+                <div id="tags">
+                  <p class="tag">$50 - $100</p>
+                  <p class="tag">Branding</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Another Project Card Example -->
+            <div class="project-card" data-category="ecommerce">
+              <img
+                src="uk-mega-shop.png"
+                alt="UK Mega Shop — WooCommerce Store"
+                class="project-image"
+              />
+              <div class="project-info">
+                <div class="project-title">UK Mega Shop — WooCommerce</div>
+                <div class="project-description">
+                  UK Mega Shop is an e-commerce grocery store in the UK. They
+                  want to expand their...
+                </div>
+                <div id="tags">
+                  <p class="tag">$400 - $500</p>
+                  <p class="tag">E-Commerce</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Another Project Card Example -->
+            <div class="project-card" data-category="transportation">
+              <img
+                src="taxi.png"
+                alt="Makkah Madina Taxi"
+                class="project-image"
+              />
+              <div class="project-info">
+                <div class="project-title">Makkah Madina Taxi</div>
+                <div class="project-description">
+                  The Makkah Madina Taxi Service offers an affordable and
+                  reliable transportation option...
+                </div>
+                <div id="tags">
+                  <p class="tag">$100 - $200</p>
+                  <p class="tag">Traveling</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <section id="section3">
-        <div id="portfolio-header">
-          <h2 id="portfolio">Portfolio</h2>
-          <label class="switch">
-            <input type="checkbox" id="dark-mode-toggle">
-            <span class="slider"></span>
-        </label>
-        </div>
 
-        <div id="filters">
-          <div class="custom-dropdown">
-            <div class="dropdown-header">Search areas of expertise</div>
-            <div class="dropdown-options">
-              <div class="option" data-category="all">All Projects</div>
-              <div class="option" data-category="branding">Branding</div>
-              <div class="option" data-category="ecommerce">E-Commerce</div>
-              <div class="option" data-category="transportation">
-                Transportation
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="projects-count">Showing 3 projects</div>
-        <div class="projects-grid">
-          <div class="project-card" data-category="branding">
-            <img
-              src="designe.png"
-              alt="Designe Solutions and Co"
-              class="project-image"
-            />
-            <div class="project-info">
-              <div class="project-title">Designe Solutions and Co</div>
-              <div class="project-description">
-                It is a branding services agency providing their services all
-                over the world on Fiverr. But now...
-              </div>
-              <div id="tags">
-                <p class="tag">$50 - $100</p>
-                <p class="tag">Branding</p>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="ecommerce">
-            <img
-              src="uk-mega-shop.png"
-              alt="UK Mega Shop — WooCommerce Store"
-              class="project-image"
-            />
-            <div class="project-info">
-              <div class="project-title">UK Mega Shop — WooCommerce</div>
-              <div class="project-description">
-                UK Mega Shop is an e-commerce grocery store in the UK. They want
-                to expand their...
-              </div>
-              <div id="tags">
-                <p class="tag">$400 - $500</p>
-                <p class="tag">E-Commerce</p>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="transportation">
-            <img
-              src="taxi.png"
-              alt="Makkah Madina Taxi"
-              class="project-image"
-            />
-            <div class="project-info">
-              <div class="project-title">Makkah Madina Taxi</div>
-              <div class="project-description">
-                The Makkah Madina Taxi Service offers an affordable and reliable
-                transportation option...
-              </div>
-              <div id="tags">
-                <p class="tag">$100 - $200</p>
-                <p class="tag">Traveling</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const dropdown = document.querySelector(".custom-dropdown");
-        const header = dropdown.querySelector(".dropdown-header");
-        const options = dropdown.querySelector(".dropdown-options");
-        const projectCards = document.querySelectorAll(".project-card");
-        const projectsCount = document.getElementById("projects-count");
-        const toggleSwitch = document.getElementById("dark-mode-toggle");
+      <!-- Audio Element for Dark Mode Toggle Sound -->
+      <audio id="toggle-sound" src="tik.mp3"></audio>
 
-        header.addEventListener("click", function () {
-          options.style.display =
-            options.style.display === "block" ? "none" : "block";
-        });
+      <!-- JavaScript for Interactive Elements -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const dropdown = document.querySelector(".custom-dropdown");
+          const header = dropdown.querySelector(".dropdown-header");
+          const options = dropdown.querySelector(".dropdown-options");
+          const projectCards = document.querySelectorAll(".project-card");
+          const projectsCount = document.getElementById("projects-count");
+          const toggleSwitch = document.getElementById("dark-mode-toggle");
+          const toggleSound = document.getElementById("toggle-sound");
 
-        document.addEventListener("click", function (e) {
-          if (!dropdown.contains(e.target)) {
-            options.style.display = "none";
-          }
-        });
-
-        options.querySelectorAll(".option").forEach((option) => {
-          option.addEventListener("click", function () {
-            header.textContent = this.textContent;
-            options.style.display = "none";
-            const category = this.dataset.category;
-            filterProjects(category);
+          // Toggle dropdown options visibility
+          header.addEventListener("click", function () {
+            options.style.display =
+              options.style.display === "block" ? "none" : "block";
           });
-        });
 
-        function filterProjects(category) {
-          let visibleCount = 0;
-          projectCards.forEach((card) => {
-            if (category === "all" || card.dataset.category === category) {
-              card.style.display = "block";
-              visibleCount++;
-            } else {
-              card.style.display = "none";
+          // Hide dropdown options when clicking outside
+          document.addEventListener("click", function (e) {
+            if (!dropdown.contains(e.target)) {
+              options.style.display = "none";
             }
           });
-          projectsCount.textContent = `Showing ${visibleCount} project${
-            visibleCount !== 1 ? "s" : ""
-          }`;
-        }
 
-        toggleSwitch.addEventListener("change", function () {
-          document.body.classList.toggle("dark-mode");
+          // Filter projects based on selected category
+          options.querySelectorAll(".option").forEach((option) => {
+            option.addEventListener("click", function () {
+              header.textContent = this.textContent;
+              options.style.display = "none";
+              const category = this.dataset.category;
+              filterProjects(category);
+            });
+          });
+
+          function filterProjects(category) {
+            let visibleCount = 0;
+            projectCards.forEach((card) => {
+              if (category === "all" || card.dataset.category === category) {
+                card.style.display = "block";
+                visibleCount++;
+              } else {
+                card.style.display = "none";
+              }
+            });
+            projectsCount.textContent = `Showing ${visibleCount} project${
+              visibleCount !== 1 ? "s" : ""
+            }`;
+          }
+
+          // Toggle dark mode
+          toggleSwitch.addEventListener("change", function () {
+            document.body.classList.toggle("dark-mode");
+            toggleSound.play(); // Play the sound on toggle
+          });
         });
-      });
-    </script>
+      </script>
+    </div>
   </body>
 </html>
